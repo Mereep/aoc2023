@@ -172,7 +172,7 @@ namespace aoc2024::day14 {
         return field;
     }
 
-    int day14_1(std::vector<std::string> &in) {
+    int day14_1(const std::vector<std::string> &in) {
         Field field = Field::parse(in);
         // field.print_field();
         field.tilt(TiltDir::NORTH);
@@ -181,7 +181,7 @@ namespace aoc2024::day14 {
         return field.sum_field();
     }
 
-    int day14_2(std::vector<std::string> &in) {
+    int day14_2(const std::vector<std::string> &in) {
         // we cannot iterate 1000000000 times (takes too long)
         // so idea is that we search until we find a loop
         // after each loop, the result is the same like after the loop before

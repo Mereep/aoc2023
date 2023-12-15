@@ -4,7 +4,7 @@ See: https://adventofcode.com/2023
 C++ solutions by
 
 ### Run
-Uses C++ 20
+Uses C++ 20 (for whatever reason)
 ```bash
 cmake .
 ```

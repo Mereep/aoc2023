@@ -152,8 +152,8 @@ namespace aoc2024::day14 {
         size_t m_height = 0;
     };
 
-    int day14_1(std::vector<std::string>& input);
-    int day14_2(std::vector<std::string>& input);
+    int day14_1(const std::vector<std::string>& input);
+    int day14_2(const std::vector<std::string>& input);
 
 }
 #endif //AOC2024_DAY14_H
