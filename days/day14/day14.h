@@ -90,7 +90,7 @@ namespace aoc2024::day14 {
             return m_height;
         }
 
-        std::string to_string() const {
+        [[nodiscard]] std::string to_string() const {
             std::string s;
             for (size_t y = 0; y < m_height; ++y) {
                 for (size_t x = 0; x < m_width; ++x) {
