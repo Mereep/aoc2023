@@ -4,7 +4,6 @@
 
 #include "day16.h"
 #include <iostream>
-#include <set>
 
 namespace aoc2024::day16 {
     std::string Field::energy_map() const {
@@ -146,7 +145,7 @@ namespace aoc2024::day16 {
                 new_y = beam.y;
             }
 
-            // check whats on the new field
+            // check what is under us on the new field
             const auto new_field = get(new_x, new_y);
             // nothin?
             if (new_field == std::nullopt) { // out of bounds
@@ -155,7 +154,7 @@ namespace aoc2024::day16 {
             }
 
             switch (new_field.value()) {
-                case FieldType::SPACE: // just move (we already did that)
+                case FieldType::SPACE: // just move (we already did that) (SPACE)
                     break;
                 case FieldType::REFLECTOR_UPWARDS: // `/`
                     switch (beam.dir) {
@@ -173,7 +172,7 @@ namespace aoc2024::day16 {
                             break;
                     }
                     break;
-                case FieldType::REFLECTOR_DOWNWARDS: // `\`
+                case FieldType::REFLECTOR_DOWNWARDS: // `\` (REFLECTOR_DOWNWARDS)
                     switch (beam.dir) {
                         case Direction::UP:
                             beam.dir = Direction::LEFT;
@@ -189,7 +188,7 @@ namespace aoc2024::day16 {
                             break;
                     }
                     break;
-                case FieldType::SPLITTER_HORIZONTAL: // `-`
+                case FieldType::SPLITTER_HORIZONTAL: // `-` (SPLITTER_HORIZONTAL)
                     switch (beam.dir) {
                         case Direction::UP: // those will split the guy up
                         case Direction::DOWN:
@@ -205,7 +204,7 @@ namespace aoc2024::day16 {
                     }
                     break;
 
-                case FieldType::SPLITTER_VERTICAL: // `|`; analogous to `-`
+                case FieldType::SPLITTER_VERTICAL: // `|`; analogous to `-` (SPLITTER_HORIZONTAL)
                     switch (beam.dir) {
                         case Direction::LEFT: // those will split the guy up
                         case Direction::RIGHT:

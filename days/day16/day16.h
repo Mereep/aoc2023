@@ -80,7 +80,8 @@ namespace aoc2024::day16 {
         }
 
         /***
-        /***adds a [Beam] if it is not out of bounds **/
+         * adds a [Beam] if it is not out of bounds
+         * **/
         void add_beam(Beam beam) {
             if (beam.x >= width() || beam.y >= height()) {
                 return;
@@ -90,7 +91,6 @@ namespace aoc2024::day16 {
 
         /***
          * will do one `frame`
-         *
          */
         void move_beams();
 
@@ -118,14 +118,7 @@ namespace aoc2024::day16 {
          */
         [[nodiscard]] std::string to_string() const;
 
-        /***
-         * Used as a simple way to find if two fields are the same (loop detection)
-         * @return
-         */
-        [[nodiscard]] std::string to_hash_string() const;
-
         [[nodiscard]] std::string to_visited_map_string() const;
-
 
         /***
          * returns the field with energized fields marked with a `#`
