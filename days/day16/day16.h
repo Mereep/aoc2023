@@ -49,7 +49,7 @@ namespace aoc2024::day16 {
             return m_height;
         }
 
-        void init_field(size_t width, size_t  height) {
+        void init_field(size_t width, size_t height) {
             m_width = width;
             m_height = height;
             m_field = std::vector<FieldType>(width * height);
@@ -125,7 +125,9 @@ namespace aoc2024::day16 {
          * @return
          */
         [[nodiscard]] std::string energy_map() const;
+
         [[nodiscard]] size_t energy_level() const;
+
     private:
 
         std::vector<FieldType> m_field;

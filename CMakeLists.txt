@@ -6,7 +6,7 @@ add_executable(aoc2024 main.cpp
         days/day14/day14.cpp
         utils/file_utils.cpp
         days/day16/day16.cpp
-        days/day16/day16.h
+        days/day17/day17.cpp
 )
 set_target_properties(aoc2024 PROPERTIES CXX_STANDARD 20)
 target_compile_definitions(aoc2024 PRIVATE BASE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
